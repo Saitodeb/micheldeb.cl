@@ -1,77 +1,99 @@
-:root {
-  --bg: #0e0e0e;
-  --fg: #e6dccd;
-  --muted: #8a8478;
-  --accent: #c8a96e;
-  --card: #161616;
-  --border: #2a2a2a;
-}
-
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: Georgia, serif;
-  line-height: 1.7;
-}
-
-/* CONTENEDOR */
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
-/* HERO */
-h1 {
-  font-size: 64px;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  color: var(--muted);
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
-/* SECCIONES */
-section {
-  margin-top: 60px;
-}
-
-h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
-}
-
-/* LIBROS */
-.book {
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.book:hover {
-  border-color: var(--accent);
+  font-family: system-ui, serif;
+  background: #0a0a0a;
+  color: #eaeaea;
 }
 
 /* NAV */
-.nav {
-  position: fixed;
-  top: 0;
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* HERO */
+.hero {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+
+.hero h2 {
+  font-size: 60px;
+}
+
+/* BIO */
+.bio {
+  display: flex;
+  gap: 40px;
+  padding: 60px;
+  align-items: center;
+}
+
+.bio img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+/* LIBROS GRID PROFESIONAL */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.card {
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card img {
   width: 100%;
-  padding: 20px;
-  background: rgba(14,14,14,0.8);
-  backdrop-filter: blur(10px);
+  height: 280px;
+  object-fit: cover;
 }
 
-.nav a {
-  margin-right: 20px;
-  color: var(--muted);
-  text-decoration: none;
+.card:hover {
+  transform: scale(1.05);
 }
 
-.nav a:hover {
-  color: var(--fg);
+/* PREMIOS */
+.premios-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+.premios-grid img {
+  width: 100px;
+}
+
+/* MEDIOS */
+.medios {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.medios img {
+  width: 80px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.5;
 }
