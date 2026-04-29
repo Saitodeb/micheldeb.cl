@@ -4,79 +4,187 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michel Deb</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #0e0e0e;
+      color: #eae6dc;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      margin: 0 0 20px;
+    }
+
+    h1 {
+      font-size: 64px;
+    }
+
+    h2 {
+      margin-top: 60px;
+      font-size: 28px;
+    }
+
+    p {
+      color: #bdb7ab;
+      font-size: 18px;
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px;
+      background: rgba(14,14,14,0.8);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      z-index: 10;
+    }
+
+    .nav a {
+      margin: 0 15px;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav a:hover {
+      color: #fff;
+    }
+
+    /* HERO */
+    .hero {
+      margin-top: 120px;
+    }
+
+    .tagline {
+      font-size: 22px;
+      max-width: 600px;
+      color: #999;
+    }
+
+    /* GRID LIBROS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      border-color: #c8a96e;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+  </style>
 </head>
-<body>
 <body>
 
 <div class="nav">
   <a href="#bio">Biografía</a>
   <a href="#libros">Libros</a>
-  <a href="#medios">Medios</a>
+  <a href="#premios">Premios</a>
 </div>
 
 <div class="container">
 
-  <h1>Michel Deb</h1>
-  <p class="tagline">
-    Ciencia ficción, terror y fantasía desde Chile hacia lo inquietante.
-  </p>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Michel Deb</h1>
+    <p class="tagline">
+      Ciencia ficción, terror y fantasía desde Chile hacia lo inquietante.
+    </p>
+  </section>
 
- <section id="bio">
-  <h2>Biografía</h2>
+  <!-- BIO -->
+  <section id="bio">
+    <h2>Biografía</h2>
 
-  <p>
-    Michel Deb (Santiago, Chile) es un escritor de ciencia ficción, terror y fantasía, actualmente radicado en Limache. De formación informática, ha desarrollado una trayectoria que cruza la tecnología, la escritura y el diseño editorial, consolidando una voz propia dentro de la narrativa fantástica contemporánea.
-  </p>
+    <p>
+      Michel Deb (Santiago, Chile) es un escritor de ciencia ficción, terror y fantasía, actualmente radicado en Limache. De formación informática, ha desarrollado una trayectoria que cruza la tecnología, la escritura y el diseño editorial.
+    </p>
 
-  <p>
-    Es miembro fundador de Alciff (Asociación de Literatura de Ciencia Ficción y Fantástica Chilena) y cofundador de Sietch Ediciones, proyecto editorial independiente enfocado en la difusión de literatura de género.
-  </p>
+    <p>
+      Es miembro fundador de Alciff y cofundador de Sietch Ediciones, consolidando su compromiso con la literatura independiente.
+    </p>
 
-  <p>
-    Su obra ha sido publicada en distintos países y formatos, incluyendo ediciones impresas, internacionales y adaptaciones a audiolibro. Parte de su trabajo forma parte de colecciones como la Biblioteca Pública de Yale (EE.UU.) y la Biblioteca Pública de Londres (Reino Unido), consolidando una presencia más allá del ámbito local.
-  </p>
+    <p>
+      Su obra ha sido publicada en distintos países y forma parte de colecciones como la Biblioteca Pública de Yale y la Biblioteca Pública de Londres.
+    </p>
 
-  <p>
-    Ha participado activamente en el circuito literario internacional, destacando su presencia como autor invitado en la Feria Internacional del Libro de Lima (2025), donde fue parte de actividades culturales, entrevistas y encuentros con lectores.
-  </p>
+    <p>
+      Ha participado en circuitos internacionales, destacando su presencia en la Feria Internacional del Libro de Lima 2025.
+    </p>
 
-  <p>
-    Su narrativa se caracteriza por la construcción de universos complejos, explorando la identidad, los límites de la realidad y los conflictos éticos desde una mirada contemporánea.
-  </p>
-</section>
-  <h2>Trayectoria destacada</h2>
+  </section>
 
-  <ul>
-    <li>Más de una década de publicaciones en narrativa y poesía.</li>
-    <li>Obras editadas en Chile, México, Argentina, España y Perú.</li>
-    <li>Adaptaciones a audiolibro en plataformas internacionales.</li>
-    <li>Participación en ferias y circuitos literarios internacionales.</li>
-  </ul>
-
+  <!-- LIBROS -->
   <section id="libros">
     <h2>Libros</h2>
 
-    <div class="book">
-      <strong>Prayaphati</strong>
-      <p>Una historia donde lo espiritual y lo humano entran en conflicto.</p>
-    </div>
+    <div class="grid">
 
-    <div class="book">
-      <strong>Noah el Primario</strong>
-      <p>Exploración de identidad y transformación.</p>
-    </div>
+      <div class="card">
+        <h3>Prayaphati</h3>
+        <p>Una historia donde lo espiritual y lo humano entran en conflicto.</p>
+      </div>
 
-    <div class="book">
-      <strong>Front 243</strong>
-      <p>Ciencia ficción directa, cruda y especulativa.</p>
+      <div class="card">
+        <h3>Noah el Primario</h3>
+        <p>Exploración de identidad y transformación.</p>
+      </div>
+
+      <div class="card">
+        <h3>Front 243</h3>
+        <p>Ciencia ficción directa y especulativa.</p>
+      </div>
+
+      <div class="card">
+        <h3>La Maldición Forttia</h3>
+        <p>Fantasía oscura con tensión narrativa.</p>
+      </div>
+
     </div>
 
   </section>
 
-  <section id="medios">
-    <h2>Medios</h2>
-    <p>Entrevistas en televisión, radio y medios digitales.</p>
+  <!-- PREMIOS -->
+  <section id="premios">
+    <h2>Premios y reconocimientos</h2>
+
+    <ul>
+      <li>FrikiManía Awards 2025 – Prayaphati</li>
+      <li>International Latino Book Awards 2023 – Noah el Primario</li>
+      <li>North Texas Book Festival 2020 – Orbe Sathiri</li>
+      <li>Premio Lector Chile 2018 – Orbe Dividido</li>
+    </ul>
+
   </section>
 
 </div>
